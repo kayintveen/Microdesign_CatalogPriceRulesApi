@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Microdesign\CatalogPriceRulesApi\Api\CatalogRuleRepositoryInterface"
+                type="Microdesign\CatalogPriceRulesApi\Model\CatalogRuleManagement" />
+    <preference for="Magento\CatalogRule\Api\CatalogRuleRepositoryInterface"
+                type="Magento\CatalogRule\Model\CatalogRuleRepository" />
+    <type name="Magento\CatalogRule\Api\CatalogRuleRepositoryInterface">
+        <plugin name="salesrule_add_websitecustomerids_extension_attribute" type="Microdesign\CatalogPriceRulesApi\Plugin\CatalogRuleRepositoryPlugin" />
+    </type>
+</config>
